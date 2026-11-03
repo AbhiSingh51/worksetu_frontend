@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .page-border {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 6px solid #0284c7; /* Brand Blue */
+    pointer-events: none; /* Allows clicks to pass through to elements underneath */
+    z-index: 9999;
+  }
+}
+body {
+  border: 6px solid #0284c7; /* Brand Blue color */
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+/* Ensure form buttons remain fully visible on mobile keyboards and viewports */
+@media (max-width: 640px) {
+  form {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
